@@ -1,0 +1,24 @@
+# smallest-element-in-array
+#include <iostream>
+using namespace std;
+int findSmallestElement(int a[], int m){
+ int temp = a[0];
+   for(int i=0; i<m; i++) {
+      if(temp>a[i]) {
+         temp=a[i];
+      }
+   }
+   return temp;
+}
+int main() {
+   int m;
+   cout<<" size of array: ";
+   cin>>m; int a[m-1];
+   cout<<" array elements: ";
+   for(int i=0; i<m; i++){
+      cin>>a[i];
+   }
+   int smallest = findSmallestElement(a, m);
+   cout<<"smallest element: "<<smallest;
+   return 0;
+}
